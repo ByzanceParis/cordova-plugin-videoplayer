@@ -5,7 +5,7 @@ module.exports = {
     DEFAULT_OPTIONS: {
         volume: 1.0,
         scalingMode: 1,
-        loop:0
+        loop: 0
     },
 
     SCALING_MODE: {

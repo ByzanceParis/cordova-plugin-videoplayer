@@ -190,7 +190,9 @@ public class VideoPlayer extends CordovaPlugin implements OnCompletionListener, 
         try {
             int loop = options.getInt("loop");
             Log.d(LOG_TAG, "setLoop: " + loop);
-            player.setLooping(true);
+            if(loop == 1) {
+                player.setLooping(true);
+            }
         } catch (Exception e) {
             PluginResult result = new PluginResult(PluginResult.Status.ERROR, e.getLocalizedMessage());
             result.setKeepCallback(false); // release status callback in JS side
